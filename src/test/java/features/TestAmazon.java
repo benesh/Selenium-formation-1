@@ -4,6 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chromium.ChromiumDriver;
+
+import org.openqa.selenium.remote.Browser;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,30 +17,34 @@ import java.time.Duration;
 public class TestAmazon {
     public final long WAIT_DURATION=10;
 
+
     @Test
     public void TestNavBarClick(){
+        //add the different webdrivers
         System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver.exe");
-        WebDriver driver = new FirefoxDriver();
-        driver.get("https://www.amazon.fr/");
+
+        //initiate the webdriver wnated
+        WebDriver driverFirfox = new FirefoxDriver();
+        driverFirfox.get("https://www.amazon.fr/");
 
         By navcartID = By.id("nav-cart");
         By accepCookieCSS = By.cssSelector("input#sp-cc-accept");
-        By navcartPATH = By.xpath("");
+        //By navcartPATH = By.xpath("");
         //By accueil = By.id("")
 
-        driver.manage().window().maximize();
+        driverFirfox.manage().window().maximize();
 
         //cliquer sur Accept Cookie
-        WebElement buttonAcceptCookie = driver.findElement(accepCookieCSS);
+        WebElement buttonAcceptCookie = driverFirfox.findElement(accepCookieCSS);
         buttonAcceptCookie.click();
 
         //Test de sur les meilleurs ventes
-        testClickBestSeller(driver,WAIT_DURATION);
+        testClickBestSeller(driverFirfox,WAIT_DURATION);
 
         //cliquer sur Panier
-        WebElement webElementBoutonPanier = driver.findElement(navcartID);
+        WebElement webElementBoutonPanier = driverFirfox.findElement(navcartID);
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(WAIT_DURATION));
+        WebDriverWait wait = new WebDriverWait(driverFirfox, Duration.ofSeconds(WAIT_DURATION));
         wait.until(ExpectedConditions.visibilityOfAllElements(webElementBoutonPanier));
 
         webElementBoutonPanier.click();
@@ -47,8 +54,10 @@ public class TestAmazon {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        driver.quit();
+        driverFirfox.quit();
     }
+
+
 
     /**
     * 1. Cas de test
