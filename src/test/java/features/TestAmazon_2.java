@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
+
 public class TestAmazon_2 {
 
     public final long WAIT_DURATION=10;
@@ -39,21 +40,21 @@ public class TestAmazon_2 {
         element_buttonLoupe_Research.click();
 
         //Prendre le premier elelment de la liste
-        By firstresult = By.cssSelector("div.s-result-list >div[data-component-type=\"s-search-result\"]");
+        By firstresult = By.cssSelector("div.s-result-list>div[data-component-type=\"s-search-result\"]");
         WebElement element_firstElement = driverFirfox.findElement(firstresult);
         wait.until(ExpectedConditions.visibilityOfAllElements(element_firstElement));
         element_firstElement.click();
 
-        //adding to the chart
-        By addchart = By.id("add-to-cart-button");
-        By chart_icone =  By.id("nav-cart");
-        WebElement button_addchart= driverFirfox.findElement(addchart);
-        WebElement button_charticone = driverFirfox.findElement(chart_icone);
-        wait.until(ExpectedConditions.visibilityOfAllElements(button_charticone));
-        button_addchart.click();
+        //adding to the basket
+        By add_to_basket = By.id("add-to-cart-button");
+        By basket_icone =  By.id("nav-cart");
+        WebElement button_add_to_basket= driverFirfox.findElement(add_to_basket);
 
-        button_charticone.click();
+        button_add_to_basket.click();
 
+        WebElement button_basket_icone = driverFirfox.findElement(basket_icone);
+        wait.until(ExpectedConditions.visibilityOf(button_basket_icone));
+        button_basket_icone.click();
 
         driverFirfox.quit();
     }

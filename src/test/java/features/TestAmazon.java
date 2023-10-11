@@ -57,8 +57,6 @@ public class TestAmazon {
         driverFirfox.quit();
     }
 
-
-
     /**
     * 1. Cas de test
     * 2. Cliqyer sur le menue burger qui s'appelle "Toute"
@@ -117,9 +115,6 @@ public class TestAmazon {
         elem_user_name.sendKeys("standard_user");
         element_pwd.sendKeys("secret_sauce");
         elem_button_login.click();
-
-
-
     }
 
 }
