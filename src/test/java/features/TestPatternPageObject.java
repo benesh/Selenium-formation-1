@@ -51,7 +51,7 @@ public class TestPatternPageObject {
         log.info("Act gettin Title successfull");
         //Assert
         Assert.assertEquals(cp,titleExpected,"Assertion Done");
-        Assert.fail(" Je test le screenshot");
+        //Assert.fail(" Je test le screenshot");
     }
 
     @AfterMethod
