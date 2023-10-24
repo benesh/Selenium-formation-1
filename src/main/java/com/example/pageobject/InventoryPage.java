@@ -1,11 +1,12 @@
 package com.example.pageobject;
 
+import org.testng.Assert;
 import lombok.extern.log4j.Log4j2;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
 
 @Log4j2
 public class InventoryPage {
@@ -24,13 +25,12 @@ public class InventoryPage {
         log.info("Element succesfully added");
         return this;
     }
-
     public CartPage cartClick(){
         buttonCart.click();
         return new CartPage(this.driver);
     }
-
-
-
+    public void checkPageTitle(String titleExpected ){
+        Assert.assertEquals(driver.getTitle(),titleExpected);
+    }
 
 }
