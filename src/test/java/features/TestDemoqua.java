@@ -46,6 +46,8 @@ public class TestDemoqua {
                 .salaryClickToSort()
                 .clickIconeDeleteLastElement();
 
+        // Asser 2
+        
 
     }
 
