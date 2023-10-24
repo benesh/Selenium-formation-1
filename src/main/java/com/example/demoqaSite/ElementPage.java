@@ -18,12 +18,19 @@ public class ElementPage {
         PageFactory.initElements(driver,this);
         log.info("Opening Element Page");
     }
-    public String getPageNamePath(){
-        log.info("Verifying the Current URL");
+    public ElementPage verifyingCurrentPageIsElement(){
+        log.info("Verifying the Current URL or Page Element");
         String sep = "/";
         String url =driver.getCurrentUrl();
-        return StringUtils.substringAfterLast(url,sep);
+        String curentPage = StringUtils.substringAfterLast(url,sep);
+        if (curentPage == "elements"){
+            return this;
+        } else{
+            return this;
+        }
     }
+
+
     public WebtablesPage clickWebtablesPage(){
         webtables.click();
         log.info("Opening WebTablesPage");

@@ -28,25 +28,18 @@ public class TestDemoqua {
     @Test
     public void exerciseDay3() {
         //Arragne
-        String pageNameelements = "elements";
         String expectedTextCell = " ";
 
-        //Act1
-        ElementPage elementPageObject = new HomePage(driver)
-                .clickElementPage();
-
-        //Assert
-        String pagetoAssert = elementPageObject.getPageNamePath();
-        Assert.assertEquals(pagetoAssert,"elements","Assertion Done");
-
-        //Act 2
-        WebtablesPage wettablespage = elementPageObject
+        //Act
+        WebtablesPage wettablespage = new HomePage(driver)
+                .clickElementPage()
+                .verifyingCurrentPageIsElement()
                 .clickWebtablesPage()
                 .salaryClickToSort()
                 .salaryClickToSort()
                 .clickIconeDeleteLastElement();
 
-        // Asser 2
+        // Asser
         Assert.assertEquals(wettablespage.getTextOfLastRow(),expectedTextCell,"Assert Done");
     }
 
