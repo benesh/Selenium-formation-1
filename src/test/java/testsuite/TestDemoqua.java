@@ -1,4 +1,4 @@
-package features;
+package testsuite;
 
 import com.example.core.BaseDriver;
 import com.example.demoqaSite.ElementPage;
@@ -25,11 +25,11 @@ public class TestDemoqua {
         driver.manage().window().maximize();
     }
 
-
     @Test
     public void exerciseDay3() {
         //Arragne
         String pageNameelements = "elements";
+        String expectedTextCell = " ";
 
         //Act1
         ElementPage elementPageObject = new HomePage(driver)
@@ -47,8 +47,7 @@ public class TestDemoqua {
                 .clickIconeDeleteLastElement();
 
         // Asser 2
-        
-
+        Assert.assertEquals(wettablespage.getTextOfLastRow(),expectedTextCell,"Assert Done");
     }
 
     @AfterMethod

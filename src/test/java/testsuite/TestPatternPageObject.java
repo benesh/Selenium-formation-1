@@ -1,4 +1,4 @@
-package features;
+package testsuite;
 
 import com.example.core.BaseDriver;
 import com.example.pageobject.LoginUserPage;

@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 @Log4j2
 public class WebtablesPage {
@@ -17,9 +18,12 @@ public class WebtablesPage {
     WebDriverWait wait;
     public final long WAIT_DURATION=10;
     @FindBy(xpath="//*[@class=\"rt-tbody\"]/div[3]//*[@title=\"Delete\"]")
-    WebElement iconeDeleteLastElement;
-    @FindBy(xpath = "//div[@class=\"rt-thead -header\"]/div/div[5]")
+    WebElement iconeDeleteThirdElement;
+    @FindBy(xpath = "//div[@class=\"rt-tbody\"]/div[3]/div/div[1]")
+    WebElement cellThirdrowElement;
+    @FindBy(css = ".rt-thead>div>div:nth-child(5)")
     WebElement selerylabelElement;
+
 
     ////div[@class="rt-thead -header"]/div/div[5]
     //.rt-thead>div>div:nth-child(5)
@@ -38,13 +42,16 @@ public class WebtablesPage {
     }
 
     public WebtablesPage clickIconeDeleteLastElement(){
-        iconeDeleteLastElement.click();
+        iconeDeleteThirdElement.click();
         log.info("Deleting Last Element");
         return this;
     }
 
-    public void verifyIFLastElementDeleted(){
-        
+    public String getTextOfLastRow(){
+
+        String tempvar = cellThirdrowElement.getText();
+        log.info("Getting Thrid Element :"+ tempvar +" " + tempvar.length());
+        return tempvar;
     }
 
 }
