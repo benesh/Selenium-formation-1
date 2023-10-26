@@ -1,9 +1,8 @@
 package testsuite;
 
 import com.example.core.BaseDriver;
-import com.example.demoqaSite.ElementPage;
-import com.example.demoqaSite.HomePage;
-import com.example.demoqaSite.WebtablesPage;
+import com.example.demoqapages.HomePage;
+import com.example.demoqapages.WebtablesPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;

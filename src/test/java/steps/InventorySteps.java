@@ -1,11 +1,10 @@
 package steps;
 
-import com.example.pageobject.InventoryPage;
+import com.example.saucedemopages.InventoryPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 public class InventorySteps {
     InventoryPage inventoryPage;

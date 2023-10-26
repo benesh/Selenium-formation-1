@@ -1,10 +1,9 @@
 package steps;
 
 
-import com.example.pageobject.LoginUserPage;
+import com.example.saucedemopages.LoginUserPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
-import io.cucumber.java.en.Given;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;

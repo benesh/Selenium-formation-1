@@ -1,7 +1,6 @@
 package steps;
 
-import com.example.pageobject.CartPage;
-import io.cucumber.java.en.And;
+import com.example.saucedemopages.CartPage;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;

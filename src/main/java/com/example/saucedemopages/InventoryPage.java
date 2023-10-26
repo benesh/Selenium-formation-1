@@ -1,4 +1,4 @@
-package com.example.pageobject;
+package com.example.saucedemopages;
 
 import org.testng.Assert;
 import lombok.extern.log4j.Log4j2;

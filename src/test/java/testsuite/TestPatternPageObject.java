@@ -1,7 +1,7 @@
 package testsuite;
 
 import com.example.core.BaseDriver;
-import com.example.pageobject.LoginUserPage;
+import com.example.saucedemopages.LoginUserPage;
 import lombok.extern.log4j.Log4j2;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;

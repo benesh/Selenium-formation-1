@@ -1,4 +1,4 @@
-package com.example.demoqaSite;
+package com.example.demoqapages;
 
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.List;
 
 @Log4j2
 public class WebtablesPage {
