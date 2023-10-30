@@ -1,6 +1,6 @@
 # Readme Upskilling
 
-## Selenium avec TestNG
+## Selenium
 
 >> #### PRE-REQUIS Pour Selenium
 > - Creer un projet maven project
