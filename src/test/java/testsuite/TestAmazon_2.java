@@ -39,7 +39,7 @@ public class TestAmazon_2 {
         wait.until(ExpectedConditions.visibilityOfAllElements(element_buttonLoupe_Research));
         element_buttonLoupe_Research.click();
 
-        //Prendre le premier elelment de la liste
+        //Prendre le premier element de la liste
         By firstresult = By.cssSelector("div.s-result-list>div[data-component-type=\"s-search-result\"]");
         WebElement element_firstElement = driverFirfox.findElement(firstresult);
         wait.until(ExpectedConditions.visibilityOfAllElements(element_firstElement));
